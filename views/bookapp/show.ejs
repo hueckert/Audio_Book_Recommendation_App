@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Each page</title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Book: <%= currentBook.name %></h1>
+    <h1>Audio Book: <%= currentBook.name %></h1>
     <h4>Author: <%= currentBook.author %></h4>
     <h4>Category: <%= currentBook.category %></h4>
     <h4>Download: <a class= "title" href="<%= currentBook.link %>" target="_blank" >Link</a></h4>
