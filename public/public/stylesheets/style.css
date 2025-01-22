@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* nav bar */
+.radio-inputs {
+    margin: auto;
+    border-radius:60px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    padding: 0.25rem;  
+    width: fit-content;    
+    font-size: 20px;
+  }
+.radio {
+    flex: 1 1 auto;
+    margin-left: 40px; 
+    margin-right: 40px;  
+  }
+  
+
+
+
+/* homepage */
+h1, h3, h4{
+    color: #fff;
+}
+h1, h3 {
+    text-align: center;
+}
+h3 {
+    margin-bottom: 100px;
+}
+h4 {
+    margin-left: 15px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #18013f;
+}
+
+
+.gotolistBut {
+    width:fit-content;
+    height: fit-content;
+    padding: 12px;
+    position: relative;
+    font-size: 25px;
+    border-radius: 60px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background: #6c1bf7;
+    transition: all 0.2s ease;  
+}
+/* From Uiverse.io by joe-watson-sbf */ 
+.search {
+    text-align: justify;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+#keyWordInput {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #ffffff;
+    border: none;
+    color: #646464;
+    padding: 1rem;
+    border-radius: 30px;
+    width: 90%;
+    transition: all ease-in-out .5s;
+    margin-right: -2rem;
+  }
+  
+  #keyWordInput:hover, .search__input:focus {
+    box-shadow: 0 0 1em #00000013;
+  }
+  
+  #keyWordInput:focus {
+    outline: none;
+    background-color: #e3c9f5;
+  }
+  
+  .search__button {
+    font-size: 35px;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 30px;
+    margin-left: 40px;
+  }
+
+.line{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+  
+.bookcard {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 30px;
+    border-color: #283618;
+    background: #e4e0ff;
+    box-shadow: 5px 5px 10px #7862f8be,
+               -5px -5px 10px #ffffff;
+    margin: 10px;
+    padding: 20px;
+  }
+
+  #likeBut {
+    width:fit-content;
+    height: fit-content;
+    padding: 4px;
+    position: relative;
+    font-size: 25px;
+    border-radius: 60px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background: #6c1bf7;
+    transition: all 0.2s ease;
+  }
+
+/* sign in and up page */
+  .signin, .signup {
+    font-size: 25px;
+    text-align: justify;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .title {
+    color: white;
+  }
+
+  .signup__button, .signin__button {
+    font-size: 20px;
+    color: #18013f;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 30px;
+    margin-left: 10px;
+  }
+
+
+  .mybookcard {
+    width: 95%;
+    height: fit-content;
+    border-radius: 30px;
+    border-color: #283618;
+    background: #e4e0ff;
+    box-shadow: 5px 5px 10px #7862f8be,
+               -5px -5px 10px #ffffff;
+    margin-top: 40px;
+    padding: 20px;
+  }
+
+  #detailsBut {
+    width:fit-content;
+    height: fit-content;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    position: relative;
+    font-size: 15px;
+    border-radius: 60px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background: #6c1bf7;
+    transition: all 0.2s ease;
+  }
+  
+  .addNewBook {
+    width:fit-content;
+    height: fit-content;
+    padding: 12px;
+    margin: 30px;
+    position: relative;
+    font-size: 25px;
+    border-radius: 60px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background: #6c1bf7;
+    transition: all 0.2s ease;  
+}
+
+/* show page */
+#editBut, #deleteBut, #updateBut, #addBut {
+    width:fit-content;
+    height: fit-content;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin: 10px;
+    position: relative;
+    font-size: 20px;
+    border-radius: 60px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background: #6c1bf7;
+    transition: all 0.2s ease;
+  }
+
+/* edit page */
+.editForm {
+    flex-wrap: wrap;
+    text-align: justify;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-size:20px ;
+  }
+
+/* new page */
+.newForm {
+    flex-wrap: wrap;
+    text-align: justify;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-size:20px ;
+  }
+
+
+  

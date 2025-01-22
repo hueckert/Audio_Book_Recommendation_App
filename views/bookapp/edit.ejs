@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Edit page</title>
+</head>
+<body>
+    <h1>Edit: <%= currentBook.name %> </h1>
+    <form class="editForm" action="/users/<%= user._id%>/bookapp/<%= currentBook._id %>?_method=PUT" method="POST">
+        <label class="title" for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= currentBook.name %>" required>
+        
+        <label class="title"  for="author">Author:</label>
+        <input type="text" name="author" id="author" value="<%= currentBook.author %>" required>
+
+        <label class="title" for="link">Link:</label>
+        <input type="text" name="link" id="link" value="<%= currentBook.link %>">
+        
+        <label class="title" for="category">Category:</label>
+        <select id="category" name="category">
+          <option value="Fiction" <%= currentBook.category === "Fiction" ? "selected" : "" %> > Fiction </option>
+          <option value="Non-Fiction"<%= currentBook.category === "Non-Fiction" ? "selected" : "" %>> Non-Fiction </option>
+          <option value="Novel"<%= currentBook.category === "Novel" ? "selected" : "" %>> Novel </option>
+          <option value="Romance" <%= currentBook.category === "Romance" ? "selected" : "" %> > Romance </option>
+          <option value="Children's book" <%= currentBook.category === "Children's book" ? "selected" : "" %>> Children's book </option>
+          <option value="Biography"<%= currentBook.category === "Biography" ? "selected" : "" %>> Biography </option>
+          <option value="Autobiography"<%= currentBook.category === "Autobiography" ? "selected" : "" %>> Autobiography </option>
+          <option value="Mystery"<%= currentBook.category === "Mystery" ? "selected" : "" %>> Mystery </option>
+          <option value="Art"<%= currentBook.category === "Art" ? "selected" : "" %>> Art </option>
+          <option value="History"<%= currentBook.category === "History" ? "selected" : "" %>> History </option>
+          <option value="Politics"<%= currentBook.category === "Politics" ? "selected" : "" %>> Politics </option>
+          <option value="Thrillers"<%= currentBook.category === "Thrillers" ? "selected" : "" %>> Thrillers </option>
+          <option value="Academic"<%= currentBook.category === "Academic" ? "selected" : "" %>> Academic </option>
+          <option value="Other"<%= currentBook.category === "Other" ? "selected" : "" %>> Other </option>
+        </select>
+        
+        <label class="title" for="comment">Comments:</label>
+        <textarea name="comment" id="comment"> <%= currentBook.comment %> </textarea>
+        
+    
+        <!-- Add a submit button -->
+        <button id="updateBut" type="submit">Update</button>
+      </form>
+    
+</body>
+</html>
