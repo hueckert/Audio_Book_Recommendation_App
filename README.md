@@ -19,7 +19,7 @@ This app will also allow gest or AUU users to browse other people's posts, and w
 
 
 ### Getting Started: 
-* [Deployed Link]()
+* [Deployed Link]() Pending
 * [Trello Link](https://trello.com/b/ARr4gMpL/audio-book-recommendation-app)
 
 ### User Stories:
