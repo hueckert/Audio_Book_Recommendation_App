@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css" />
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="radio-inputs">
+        <%- include('./partials/_navbar.ejs') %>
+    </div>
+
+    <h1>Welcome back to the audio book recommendation App!</h1>
+    
+    <h3>An app that allows you to find download resources, make a post on recommending or criticizing a book and browse other people’s recommendations or critics.</h3>
+    
+    <h4> Find your own audio books </h4>
+    <div class="search">
+        <form method="post" action = "/search">
+            <!-- <label class="searchTitle" for="keyWordInput">Find a book:</label>
+            <br> -->
+            <input type="text" id="keyWordInput" name="keyWordInput">
+            <input class="search__button" type="submit" value="🔍">
+        </form>
+    </div>
+    <hr class="line">
+    <div>
+        <% if(user) { %>
+            <a href="/users/<%= user._id%>/bookapp"> 
+                <butto class="gotolistBut">👉 GO TO MY LIST</button>
+            </a>
+        <% } %>
+    </div>
+
+    <br>
+    <h4>Other people's recommendataion</h4>
+    <div>
+        <% homepageBooks.forEach((homepageBook)=>{ %>
+            <div class="bookcard">
+                <strong>Book name:</strong> <%= homepageBook.name %>
+                <br>
+                <strong>Book category:</strong> <%= homepageBook.category %>
+                <br>
+                <strong>Book comment:</strong> <%= homepageBook.comment %>
+                <br> 
+                <strong>Likes: </strong> <%= homepageBook.likes.length %>
+                <br> 
+                <div>
+                    <% if(user && homepageBook.likes.includes(user.username)) { %>
+                        <form id="likeBut" method="POST" action = "/like/<%= homepageBook.owner %>/<%= homepageBook._id%>?_method=PUT">
+                        <input type="hidden" name="likes" id="likes" value="<%= user.username %>">
+                        <input id="likeBut" type="submit" value="👎 DISLIKE">
+                        </form>
+                    
+                    <% } else if (user) { %>
+                        <form id="likeBut" method="POST" action = "/like/<%= homepageBook.owner %>/<%= homepageBook._id%>">
+                        <input type="hidden" name="likes" id="likes" value="<%= user.username %>">
+                        <input id="likeBut" type="submit" value="👍 LIKE">
+                        </form>
+    
+                    <% } %>
+                </div>
+            </div>
+            <br> <br>
+        <% }) %>            
+    </div>
+
+
+    
+    
+</body> 
+</html>

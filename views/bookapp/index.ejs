@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css" />
+    <title>User page</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Your audio book list</h1>
+    <ul>
+        <% books.forEach((book)=>{ %>
+          <li>
+            <div class="mybookcard">
+             <p><%= book.name %> by <%= book.author %></p>
+             <a id= "detailsBut" href="/users/<%= user._id %>/bookapp/<%= book._id %>">See details</a>
+            </div>
+          </li>
+        <% }) %>
+    </ul>
+    <br> <br>
+    <a class="addNewBook" href="/users/<%= user._id %>/bookapp/new">Add a new book</a>
+    
+</body>
+</html>

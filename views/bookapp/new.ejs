@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css" />
+    <title>Add a new book</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add a new Audio book</h1>
+    <form class="newForm" action="/users/<%= user._id%>/bookapp/new" method="POST">
+        <label class="title" for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        
+        <label class="title" for="author">Author:</label>
+        <input type="text" name="author" id="author" required>
+
+        <label class="title" for="link">Link:</label>
+        <input type="text" name="link" id="link">
+        
+        <label class="title" for="category">Category:</label>
+        <select id="category" name="category">
+          <option value="Fiction">Fiction</option>
+          <option value="Non-Fiction">Non-Fiction</option>
+          <option value="Novel">Novel</option>
+          <option value="Romance">Romance</option>
+          <option value="Children's book">Children's book</option>
+          <option value="Biography">Biography</option>
+          <option value="Autobiography">Autobiography</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Art">Art</option>
+          <option value="History">History</option>
+          <option value="Politics">Politics</option>
+          <option value="Thrillers">Thrillers</option>
+          <option value="Academic">Academic</option>
+          <option value="Other">Other</option>
+        </select>
+        
+        <label class="title" for="comment">Comments:</label>
+        <textarea name="comment" id="comment"></textarea>
+        
+    
+        <!-- Add a submit button -->
+        <button id="addBut" type="submit">Add Book</button>
+      </form>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css" />
+    <title>Sign-up</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Sign up page</h1>
+
+        <form class="signup" action="/auth/sign-up" method="POST">
+            <label class="title" for="username">Username:</label>
+            <input  type="text" name="username" id="username" />
+            <label class="title" for="password">Password:</label>
+            <input type="password" name="password" id="password" />
+            <label class="title" for="confirmPassword">Confirm Password:</label>
+            <input  type="password" name="confirmPassword" id="confirmPassword" />
+            <button class="signup__button" type="submit">Sign up</button>
+        </form>
+
+    
+</body>
+</html>

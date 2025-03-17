@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css" />
+    <title>Each page</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Audio Book: <%= currentBook.name %></h1>
+    <h4>Author: <%= currentBook.author %></h4>
+    <h4>Category: <%= currentBook.category %></h4>
+    <h4>Download: <a class= "title" href="<%= currentBook.link %>" target="_blank" >Link</a></h4>
+    <h4>Your comment: <%= currentBook.comment %></h4>
+
+    <a id="editBut" href="/users/<%= user._id %>/bookapp/<%= currentBook._id %>/edit">Edit</a>
+
+    <form
+    action="/users/<%= user._id %>/bookapp/<%= currentBook._id %>?_method=DELETE"
+    method="POST">
+    <button id="deleteBut" type="submit">Delete this book</button>
+  </form>
+
+</body>
+</html>
